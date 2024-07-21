@@ -21,7 +21,7 @@ import { FormError } from "../form-error";
 import { FormSucess } from "../form-success";
 import { login } from "../../../actions/login";
 import { useState } from "react";
-
+import { useRouter } from "next/navigation";
 export const LoginForm = () => {
 
     const [error, setError] = useState<string | undefined>("");
@@ -33,14 +33,15 @@ export const LoginForm = () => {
             password: ""
         }
     });
-
+    const router= useRouter();  
     const onSubmit = (data: z.infer<typeof loginSchema>) => {
         setError("");
         setSuccess("");
         login(data).then((props)=> {
             setError(props.error);
             setSuccess(props.success);
-        })
+        });
+        router.push("/dashboard");
     };
 
     return (
