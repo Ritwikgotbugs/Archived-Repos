@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react'
-import {motion, useAnimation} from 'framer-motion'
-import NavigationLinks from './nav-links';
 import { ChartBarIcon, HeartIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid';
-import { DividerHorizontalIcon } from '@radix-ui/react-icons';
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import NavigationLinks from './nav-links';
+import { useRouter } from 'next/navigation';
+
 
 
 const NavVariants = {
@@ -12,8 +13,7 @@ const NavVariants = {
         width: '16rem',
         transition: {
             type: 'spring',
-            damping: 15,
-            duration: 0.1,
+            damping: 10,
         }
     },
     close: {
@@ -21,6 +21,7 @@ const NavVariants = {
         transition: {
             type: 'spring',
             damping: 15,
+            duration: 0.09,
         }
     }
 
@@ -39,6 +40,8 @@ export default function Navigation() {
 
   const controls = useAnimation()
   const svgControls = useAnimation()
+  const router = useRouter()
+
   useEffect(()=>{
         if(isOpen){
             controls.start('open')
@@ -59,7 +62,8 @@ export default function Navigation() {
     variants={NavVariants}
     animate={controls}
     initial='close'
-    className='bg-neutral-900 flex flex-col z-5 gap-10 p-5 absolute top-0 left-0 h-full shadow shadow-neutral-600'>
+    data-collapsed={isOpen}
+    className='bg-neutral-900 group flex flex-col z-5 gap-10 p-5 absolute top-0 left-0 h-full shadow shadow-neutral-600'>
         <div className='flex flex-row w-full justify-between place-items-center'>
             <div className='w-10 h-10 bg-orange-200 rounded-full'/>
             <button className='p-1 rounded-full flex' onClick={()=> handleOpen()}>
@@ -84,14 +88,16 @@ export default function Navigation() {
 
             </button>
         </div>
-        <div className='flex flex-col gap-3'>
-            <NavigationLinks name='Dashboard'>
+        <div className='flex flex-col gap-3'
+        
+        >
+            <NavigationLinks name='Dashboard' onClick={()=> router.push('/dashboard')}>
                 <ChartBarIcon className='stroke-inherit stroke-[0.75] min-w-6 w-6'/>
             </NavigationLinks>
-            <NavigationLinks name='Liked Songs'>
+            <NavigationLinks name='Liked Songs' onClick={()=> router.push('/liked')}>
                 <HeartIcon className='stroke-inherit stroke-[0.75] min-w-6 w-6'/>
             </NavigationLinks>
-            <NavigationLinks name='Search'>
+            <NavigationLinks name='Search' onClick={()=> router.push('/search')}>
                 <MagnifyingGlassIcon className='stroke-inherit stroke-[0.75] min-w-6 w-6'/>
             </NavigationLinks>
             

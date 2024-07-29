@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 interface HeaderProps {
-    page: String,
+  page: string;
 }
-export default function Header({page}: HeaderProps) {
+
+export default function Header({ page }: HeaderProps) {
   return (
-    <div className='text-white text-3xl py-3'>{page}</div>
-  )
-}
+    <header className="w-full bg-primary text-white p-5 flex justify-between items-center pl-64">
+      <span className="text-lg">
+        
+      </span>
+    </header>
+  );
+};
+
+
+
+
