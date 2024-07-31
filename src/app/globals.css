@@ -6,6 +6,11 @@ html, body, :root {
   height: 100%;
 }
 
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
   @layer base {
     :root {
       --background: 222.2 84% 4.9%;

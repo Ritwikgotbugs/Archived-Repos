@@ -9,7 +9,7 @@ interface DashboardProps {
 
 export default function Layout({ children }: DashboardProps) {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-primary hide-scrollbar">
       <Navigation />
       <div className="flex flex-col flex-grow">
         <Header page={'Page'} />

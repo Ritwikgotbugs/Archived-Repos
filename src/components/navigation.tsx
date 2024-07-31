@@ -63,7 +63,7 @@ export default function Navigation() {
     animate={controls}
     initial='close'
     data-collapsed={isOpen}
-    className='bg-neutral-900 group flex flex-col z-5 gap-10 p-5 absolute top-0 left-0 h-full shadow shadow-neutral-600'>
+    className='bg-neutral-900 group flex flex-col gap-10 p-5 top-0 left-0 z-20 fixed h-full shadow shadow-neutral-600'>
         <div className='flex flex-row w-full justify-between place-items-center'>
             <div className='w-10 h-10 bg-orange-200 rounded-full'/>
             <button className='p-1 rounded-full flex' onClick={()=> handleOpen()}>
