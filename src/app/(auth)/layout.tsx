@@ -2,11 +2,11 @@ import Footer from '@/components/footer';
 import Header from '@/components/header';
 import React from 'react';
 
-interface DashboardProps {
+interface AuthProps {
   children: React.ReactNode;
 }
 
-export default function Layout({ children }: DashboardProps) {
+export default function Layout({ children }: AuthProps) {
   return (
     <div className="flex h-screen bg-primary hide-scrollbar">
       <div className="flex flex-col flex-grow">
