@@ -15,7 +15,7 @@ export default function Home() {
       <div className="space-y-6 text-center">
         <h1 className="text-6xl text-white font-bold">Auth</h1>
         <p className="font-medium text-white text-xl">Robust Authentication system</p>
-        <button onClick={()=> router.push('/login')} className="bg-white text-primary text-lg font-medium px-6 py-2 rounded-lg">Get Started</button>
+        <button onClick={()=> router.push('/dashboard')} className="bg-white text-primary text-lg font-medium px-6 py-2 rounded-lg">Get Started</button>
         <div>
         </div>
       </div>
