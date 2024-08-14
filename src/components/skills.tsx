@@ -1,19 +1,22 @@
 import React from 'react';
 
 interface SkillsTileProps {
-  title: string;
-  img: string;
-  onClick?: () => void;
+  stack: string[];
 }
 
-export const Skills = ({ title, img, onClick }: SkillsTileProps) => {
+export const Skills = ({ stack }: SkillsTileProps) => {
   return (
     <div className="bg-primary p-2 rounded-3xl inline-block">
       <div className="flex items-center gap-x-2">
-        <button onClick={onClick}>
-          <img src={img} width="28" alt="Skill" className="rounded-lg" />
-        </button>
+        {stack.map((tech, index) => (
+          <button
+            key={index}
+            className="focus:outline-none"
+          >
+            {tech}
+          </button>
+        ))}
       </div>
     </div>
   );
-}
+};

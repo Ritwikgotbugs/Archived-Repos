@@ -12,6 +12,9 @@ interface ProjectsTileProps {
   img: string;
   githubUrl: string;
   demoUrl: string;
+  stack: string[];
+  stackUrl: string[];
+
 }
 
 
