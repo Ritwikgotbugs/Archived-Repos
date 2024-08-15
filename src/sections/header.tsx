@@ -1,52 +1,57 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import {useRouter} from 'next/navigation';
-
+import { useRouter, usePathname } from 'next/navigation';
 
 export default function Header() {
-
   const router = useRouter();
+  const pathname = usePathname();
+  const [active, setActive] = useState('/');
 
-  const toSection = (path: string) => {
-    document.getElementById(path.slice(1))?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // Set active state based on the current path
+  useEffect(() => {
+    if (pathname !== null) {
+      setActive(pathname);
+    }
+  }, [pathname]);
+
+  const navItems = [
+    { name: 'About', path: '/about' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Experience', path: '/experiences' },
+    { name: 'Contact', path: '#contact' },
+  ];
 
   return (
-    <header className="w-full text-white bg-primary flex justify-between items-center px-10 py-8 fixed top-0 z-10">
+    <header className="w-full text-white bg-primary bg-opacity-80 flex justify-between items-center fixed px-10 pt-5 pb-5 top-0 z-10 backdrop-blur-md shadow-lg">
       {/* Avatar */}
       <Avatar>
         <AvatarImage src="https://github.com/shadcn.png" alt="Profile Image" />
       </Avatar>
 
-      {/*Navigation*/}
+      {/* Navigation */}
       <div className="flex items-center justify-center flex-grow">
-        <nav className="flex gap-x-8 py-3 px-5 rounded-2xl border-2 border-purple-700 bg-gray-700 bg-opacity-45">
-          <button
-            className={`text-white hover:text-gray-300`}
-            onClick={() => toSection('/about')}
-          >
-            About
-          </button>
-          <button
-            className={`text-white hover:text-gray-300 `}
-            onClick={() => toSection('/projects')}
-          >
-            Projects
-          </button>
-          <button
-            className={`text-white hover:text-gray-300 `}
-            onClick={() => toSection('/skills')}
-          >
-            Skills
-          </button>
-          <button
-            className={`text-white hover:text-gray-300`}
-            onClick={() => toSection('/contact')}
-          >
-            Contact
-          </button>
+        <nav className="flex gap-x-4 rounded-2xl p-2 border-2 border-purple-700 bg-gray-700 bg-opacity-45">
+          {navItems.map((item) => (
+            <button
+              key={item.name}
+              className={`text-white hover:text-gray-300 p-2 rounded-lg ${
+                active === item.path || (item.path === '#contact' && active === '/')
+                  ? 'bg-purple-700'
+                  : ''
+              }`}
+              onClick={() => {
+                if (item.path === '#contact') {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                  router.push(item.path);
+                }
+              }}
+            >
+              {item.name}
+            </button>
+          ))}
         </nav>
       </div>
 

@@ -1,0 +1,51 @@
+[
+    {
+      "category": "Languages",
+      "tech": [
+        { "name": "C", "iconUrl": "/assets/c.png" },
+        { "name": "C++", "iconUrl": "/assets/cpp.png" },
+        { "name": "JavaScript", "iconUrl": "/assets/javascript.png" },
+        { "name": "TypeScript", "iconUrl": "/assets/typescript.png" },
+        { "name": "Python", "iconUrl": "/assets/python.png" }
+      ]
+    },
+    {
+      "category": "Frontend",
+      "tech": [
+        { "name": "HTML", "iconUrl": "/assets/html.png" },
+        { "name": "CSS", "iconUrl": "/assets/css.png" },
+        { "name": "React", "iconUrl": "/assets/react.png" },
+        { "name": "Next.js", "iconUrl": "/assets/next.png" },
+        { "name": "TailwindCSS", "iconUrl": "/assets/tailwind.png" },
+        { "name": "ViteJS", "iconUrl": "/assets/vitejs.png" }
+      ]
+    },
+    {
+      "category": "Backend",
+      "tech": [
+        { "name": "Node.js", "iconUrl": "/assets/node.png" },
+        { "name": "Express", "iconUrl": "/assets/express.png" },
+        { "name": "Firebase", "iconUrl": "/assets/firebase.png" },
+        { "name": "Supabase", "iconUrl": "/assets/supabase.png" },
+        { "name": "MongoDB", "iconUrl": "/assets/mongo.png" },
+        { "name": "PostgreSQL", "iconUrl": "/assets/postgres.png" }
+      ]
+    },
+    {
+      "category": "App Development",
+      "tech": [
+        { "name": "Flutter", "iconUrl": "/assets/flutter.png" },
+        { "name": "React-Native", "iconUrl": "/assets/react.png" },
+        { "name": "Expo", "iconUrl": "/assets/expo.png" }
+      ]
+    },
+    {
+      "category": "Dev-Tools",
+      "tech": [
+        { "name": "Git", "iconUrl": "/assets/git.png" },
+        { "name": "Postman", "iconUrl": "/assets/postman.png" },
+        { "name": "Vercel", "iconUrl": "/assets/vercel.png" }
+      ]
+    }
+  ]
+  

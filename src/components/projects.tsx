@@ -1,6 +1,8 @@
 import React from 'react';
-import { Skills } from './skills';
 import { Badge } from "@/components/ui/badge"
+import { FaGithub } from "react-icons/fa";
+import { IoGlobeOutline } from "react-icons/io5";
+
 
 
 interface ProjectsTileProps {
@@ -8,14 +10,14 @@ interface ProjectsTileProps {
   subtitle: string;
   img: string;
   githubUrl: string;
-  demoUrl: string;
+  url: string;
   stack: string[];
 }
 
-export const ProjectsTile = ({ title, subtitle, img, githubUrl, demoUrl, stack }: ProjectsTileProps) => {
+export const ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: ProjectsTileProps) => {
 
   return (
-    <div className="bg-secondary rounded-xl w-80 h-96 flex flex-col justify-between">
+    <div className="bg-secondary cursor-pointer rounded-xl w-80 h-96 flex flex-col justify-between border-transparent border-2 hover:border-purple-500 transition-all transform hover:scale-105 hover:shadow-lg">
       <div className='px-6 pt-6 flex-grow'>
         <h1 className='text-xl font-bold text-white'>{title}</h1>
         <h2 className='text-l pb-2 text-white'>{subtitle}</h2>
@@ -31,14 +33,11 @@ export const ProjectsTile = ({ title, subtitle, img, githubUrl, demoUrl, stack }
         </div>
         
       </div>
-      <div className='flex justify-end gap-x-2 py-1 px-3'>
-        <button onClick={() => {window.open(githubUrl)}}>
-          <img src='https://img.icons8.com/?size=100&id=16318&format=png&color=FFFFFF' width="35" alt="Github" className="rounded-lg" />
-        </button>
-        <button onClick={() => {window.open(demoUrl)}}>
-          <img src='https://img.icons8.com/?size=100&id=7gn1JUOaj7KZ&format=png&color=FFFFFF' width="25" alt="Web" className="rounded-lg" />
-        </button>
+      <div className='flex justify-end gap-2 p-3 cursor-pointer'>
+      <FaGithub size={25} onClick={()=> window.open(githubUrl)} className='transform transition-transform hover:-translate-y-1'/>
+      <IoGlobeOutline size={25} onClick={()=> window.open(url)}  className='transform transition-transform hover:-translate-y-1'/>
       </div>
+
     </div>
   );
 }
