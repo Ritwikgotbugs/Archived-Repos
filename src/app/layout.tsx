@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Ritwik - Software Developer",
   description: "Ritwik Sharma",
 };
 
@@ -16,6 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/assets/avatar-2.jpg"/>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );

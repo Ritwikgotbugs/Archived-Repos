@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { Skills } from '@/components/skills';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Separator } from '@/components/ui/separator';
 
 interface Tech {
   name: string;
@@ -44,7 +45,14 @@ export const SkillsPage = () => {
 
   return (
     <div className="p-10">
-      <h1 className="text-purple-500 text-4xl font-bold mb-12 w-full flex justify-center items-center">Skills</h1>
+      <div className='flex flex-col items-center justify-center'>
+     <h1 className="text-4xl font-bold leading-tight justify-center items-center flex w-full mb-3">
+      <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+        Skills
+      </span>
+    </h1>
+    <Separator className=' bg-gradient-to-r from-purple-500 to-blue-400 justify-center items-center flex mb-8 rounded-xl'/>
+    </div>
       {loading ? (
         <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {Array.from({ length: 6 }).map((_, index) => (
@@ -61,13 +69,14 @@ export const SkillsPage = () => {
       ) : error ? (
         <p className="text-red-500">Error: {error}</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 font-mono justify-center">
           {skillsData.map((skillSet, index) => (
-            <div key={index} className="text-purple-500 w-full flex flex-col justify-start items-start">
-              <h2 className="text-2xl font-bold mb-3">{skillSet.category}</h2>
-              <Skills skills={skillSet.tech} />
+            <div key={index} className="w-full flex flex-col justify-start items-center">
+              <h2 className="text-2xl mb-3">{skillSet.category}</h2>
+              <Skills  skills={skillSet.tech} />
             </div>
           ))}
+          
         </div>
       )}
     </div>

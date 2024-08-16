@@ -21,7 +21,7 @@
       ]
     },
     {
-      "category": "Backend",
+      "category": "Backend & DB",
       "tech": [
         { "name": "Node.js", "iconUrl": "/assets/node.png" },
         { "name": "Express", "iconUrl": "/assets/express.png" },
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "category": "Dev-Tools",
+      "category": "Tools & others",
       "tech": [
         { "name": "Git", "iconUrl": "/assets/git.png" },
         { "name": "Postman", "iconUrl": "/assets/postman.png" },

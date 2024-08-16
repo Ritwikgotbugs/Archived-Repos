@@ -14,24 +14,24 @@ interface ProjectsTileProps {
   stack: string[];
 }
 
-export const ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: ProjectsTileProps) => {
+export const  ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: ProjectsTileProps) => {
 
   return (
     <div className="bg-secondary cursor-pointer rounded-xl w-80 h-96 flex flex-col justify-between border-transparent border-2 hover:border-purple-500 transition-all transform hover:scale-105 hover:shadow-lg">
       <div className='px-6 pt-6 flex-grow'>
-        <h1 className='text-xl font-bold text-white'>{title}</h1>
-        <h2 className='text-l pb-2 text-white'>{subtitle}</h2>
+        <h1 className='text-xl font-bold text-white font-mono'>{title}</h1>
+        <h2 className='text-sm pb-2 text-white font-mono'>{subtitle}</h2>
         <div className='bg-primary flex justify-center items-center p-3 rounded-lg my-2 h-36'>
           <img src={img} alt="Project" className="object-contain h-full rounded-lg" />
         </div>
         
-        <div className="flex flex-wrap gap-1">
+        <div className="flex flex-wrap gap-1 font-mono ">
           {stack.map((tech, index) => (
-            <Badge variant="default">{stack[index]}</Badge>
+            <Badge variant="destructive" className=' bg-purple-900 rounded-full px-3 py-1'>{stack[index]}</Badge>
 
           ))}
         </div>
-        
+          
       </div>
       <div className='flex justify-end gap-2 p-3 cursor-pointer'>
       <FaGithub size={25} onClick={()=> window.open(githubUrl)} className='transform transition-transform hover:-translate-y-1'/>

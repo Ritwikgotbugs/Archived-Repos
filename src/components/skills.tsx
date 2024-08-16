@@ -18,7 +18,7 @@ interface SkillsProps {
 export const Skills = ({ skills }: SkillsProps) => {
   return (
     <TooltipProvider>
-      <div className="flex flex-wrap gap-4 cursor-pointer">
+      <div className="flex flex-wrap gap-4 cursor-pointer justify-center">
         {skills.map((skill, index) => (
           <Tooltip key={index}>
             <TooltipTrigger>
