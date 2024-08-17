@@ -44,7 +44,7 @@ export default function Projects() {
 
   return (
     <div className='flex gap-5 mt-20 flex-col w-full justify-between mb-10'>
-      <div className='w-full flex flex-row gap-x-10 pt-5 flex-wrap gap-y-5 justify-center items-center'>
+      <div className='w-full flex flex-row gap-x-10 pt-5 flex-wrap gap-y-8 md:gap-y-5 justify-center items-center'>
         {loading ? (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-10">
             {Array.from({ length: 3 }).map((_, index) => (

@@ -69,7 +69,7 @@ export const SkillsPage = () => {
       ) : error ? (
         <p className="text-red-500">Error: {error}</p>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 font-mono justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 font-mono justify-center">
           {skillsData.map((skillSet, index) => (
             <div key={index} className="w-full flex flex-col justify-start items-center">
               <h2 className="text-2xl mb-3">{skillSet.category}</h2>

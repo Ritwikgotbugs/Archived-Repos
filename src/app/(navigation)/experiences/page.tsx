@@ -43,7 +43,7 @@ export default function ExperiencePage() {
 
   return (
     <div className='flex gap-5 mt-20 flex-col w-full justify-center items-center mb-5'>
-<h1 className="text-5xl font-bold mb-4 leading-tight">
+<h1 className="text-5xl font-bold md:mb-4 leading-tight mt-5">
   <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
     Experiences
   </span>

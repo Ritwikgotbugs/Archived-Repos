@@ -38,7 +38,7 @@ export const About = () => {
         className="rounded-full w-full max-w-sm transition-transform duration-500 ease-in-out transform group-hover:scale-105 group-hover:blur-sm group-hover:grayscale"
       />
       <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100">
-        <div className="bg-[url('/assets/bg-blur.jpg')] bg-cover bg-center opacity-97 border-2 border-slate-700 rounded-xl p-6 text-center w-2/3 h-1/2">
+        <div className="bg-[url('/assets/bg-blur.jpg')] bg-cover bg-center opacity-97 border-2 border-slate-700 rounded-xl p-6 text-center w-full h-2/3 md:w-2/3">
             <div className="flex flex-col justify-between">
               <BiSolidQuoteLeft size={30}/>
               <div className="flex justify-center items-center text-xl my-5 bg-gradient-to-r from-blue-600 to-blue-200 bg-clip-text text-transparent">The airplane takes off against the wind.</div>

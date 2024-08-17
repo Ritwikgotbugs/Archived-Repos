@@ -14,7 +14,7 @@ interface ExperienceProps {
 
 export const Experience = ({ tech,organization,role,url,duration,location,description }: ExperienceProps) => {
   return (
-    <div className='flex flex-col w-1/2 justify-center items-start font-mono mt-5'>
+    <div className='flex flex-col w-3/4 md:1/2 justify-center items-start font-mono mt-5'>
         <div className='flex flex-row gap-x-4 items-center justify-center'>
             <div>
                 <div className='text-xl flex font-bold text-green-500' >{role}</div>
