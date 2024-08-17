@@ -13,10 +13,10 @@ export const Contact = () => {
           <FaInstagram size={25} onClick={()=> window.open('https://www.instagram.com/ritwikksharma_/')} className='transform transition-transform hover:-translate-y-1 cursor-pointer'/>
           <BsTwitterX size={25} onClick={()=> window.open('https://x.com/Ritwikshar')} className='transform transition-transform hover:-translate-y-1 cursor-pointer'/>
       </div>
-      <p className='underline font-mono cursor-pointer' onClick={() => window.location.href = 'mailto:shritwik04@gmail.com'}>shritwik04@gmail.com</p>
+      <p className='underline cursor-pointer' onClick={() => window.location.href = 'mailto:shritwik04@gmail.com'}>shritwik04@gmail.com</p>
       <p className='text-center font-mono'>Made with ❤️ by Ritwik Sharma</p>
       <div className='text-right'>
-        <p className="font-semibold font-mono items-center justify-center">Crafted with <u onClick={()=> window.open('https://nextjs.org/')} className='cursor-pointer'>Next.Js</u> and <u onClick={()=> window.open('https://tailwindcss.com/')} className='cursor-pointer'>TailwindCSS</u></p>
+        <p className="font-semibold items-center justify-center">Crafted with <u onClick={()=> window.open('https://nextjs.org/')} className='cursor-pointer'>Next.Js</u> and <u onClick={()=> window.open('https://tailwindcss.com/')} className='cursor-pointer'>TailwindCSS</u></p>
       </div>
     </div>
   );
