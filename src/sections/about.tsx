@@ -10,7 +10,7 @@ export const About = () => {
       <div className="md:w-1/2">
         <h1 className="font-mono">ABOUT ME</h1>
         <h1 className="text-4xl font-bold leading-relaxed">
-        I'm Ritwik, a
+        I&apos;m Ritwik, a
       </h1> 
       <h1 className="text-5xl font-bold mb-4 leading-tight">
         <span className="bg-gradient-to-r from-purple-600 to-blue-400 bg-clip-text text-transparent">
@@ -20,7 +20,7 @@ export const About = () => {
 
         <p className="text-lg leading-relaxed">
           who also dabbles in app development sometimes. Currently in my pre-final year,
-          I’m all about turning creative ideas into real, working projects. I love the challenge of building things from scratch,
+          I&apos;m all about turning creative ideas into real, working projects. I love the challenge of building things from scratch,
           and something which could potentially help a million of us!
         </p>
         <div className="flex flex-row gap-x-2 mt-10 mb-10">

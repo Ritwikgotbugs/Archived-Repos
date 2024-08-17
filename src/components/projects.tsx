@@ -27,7 +27,7 @@ export const  ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: P
         
         <div className="flex flex-wrap gap-1 font-mono ">
           {stack.map((tech, index) => (
-            <Badge variant="destructive" className=' bg-purple-900 rounded-full px-3 py-1'>{stack[index]}</Badge>
+            <Badge variant="destructive" key={index} className=' bg-purple-900 rounded-full px-3 py-1'>{tech}</Badge>
 
           ))}
         </div>
