@@ -35,7 +35,7 @@ export default function Header() {
         <button
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1AKnbTWpjwM3Y-FbzDRQSUNUi2p2eL23R/view?usp=sharing'
+              'https://drive.google.com/file/d/1I5Ywegg92gIkU0qHbraPk51ere9mHPIf/view?usp=sharing'
             )
           }
           className="bg-purple-700 hover:bg-purple-600 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
@@ -54,7 +54,7 @@ export default function Header() {
         <button
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1AKnbTWpjwM3Y-FbzDRQSUNUi2p2eL23R/view?usp=sharing'
+              'https://drive.google.com/file/d/1I5Ywegg92gIkU0qHbraPk51ere9mHPIf/view?usp=sharing'
             )
           }
           className="bg-purple-700 hover:bg-purple-600 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
@@ -65,13 +65,13 @@ export default function Header() {
 
       {/* Navbar Links */}
       <div className="flex items-center justify-end flex-grow md:flex-grow-0 mt-3 md:mt-0">
-        <nav className="flex gap-x-2 md:gap-x-4 rounded-2xl p-1 md:p-2 border-2 border-purple-700 border-opacity-50 bg-gray-700 bg-opacity-45">
+        <nav className="flex gap-x-2 md:gap-x-4 rounded-2xl p-1 md:p-2 border-2 border-slate-700 border-opacity-50 bg-slate-900 bg-opacity-45">
           {navItems.map((item) => (
             <button
               key={item.name}
               className={`text-white hover:text-gray-300 p-2 md:p-2 rounded-lg transition-all ease-in-out duration-500 ${
                 active === item.path || (item.path === '#contact' && active === '/')
-                  ? 'bg-purple-700 bg-opacity-60'
+                  ? "bg-purple-700"
                   : ''
               }`}
               onClick={() => {
