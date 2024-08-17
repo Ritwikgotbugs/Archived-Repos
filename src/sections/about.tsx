@@ -45,7 +45,7 @@ export const About = () => {
         <div className="bg-[url('/assets/bg-blur.jpg')] bg-cover bg-center opacity-97 border-2 border-slate-700 rounded-xl p-6 text-center w-full h-2/3 md:w-2/3">
             <div className="flex flex-col justify-between">
               <BiSolidQuoteLeft className="md:size-10 size-5"/>
-              <div className="flex justify-center items-center md:text-xl text-md md:my-5 my-2 bg-gradient-to-r from-blue-600 to-blue-200 bg-clip-text text-transparent">"When everything seems to be going against you, remember that the airplane takes off against the wind, not with it."</div>
+              <div className="flex justify-center items-center md:text-xl text-md md:my-5 my-2 bg-gradient-to-r from-blue-600 to-blue-200 bg-clip-text text-transparent">When everything seems to be going against you, remember that the airplane takes off against the wind, not with it.</div>
               <div className="flex justify-end">- Henry Ford</div>
             </div>
         </div>
