@@ -16,7 +16,7 @@ export const Contact = () => {
       <p className='underline font-mono cursor-pointer' onClick={() => window.location.href = 'mailto:shritwik04@gmail.com'}>shritwik04@gmail.com</p>
       <p className='text-center font-mono'>Made with ❤️ by Ritwik Sharma</p>
       <div className='text-right'>
-        <p className="font-semibold font-mono">Crafted with <u onClick={()=> window.open('https://nextjs.org/')} className='cursor-pointer'>Next.Js</u> and <u onClick={()=> window.open('https://tailwindcss.com/')} className='cursor-pointer'>TailwindCSS</u></p>
+        <p className="font-semibold font-mono items-center justify-center">Crafted with <u onClick={()=> window.open('https://nextjs.org/')} className='cursor-pointer'>Next.Js</u> and <u onClick={()=> window.open('https://tailwindcss.com/')} className='cursor-pointer'>TailwindCSS</u></p>
       </div>
     </div>
   );
