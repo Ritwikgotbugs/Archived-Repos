@@ -14,8 +14,8 @@ interface ExperienceProps {
 
 export const Experience = ({ tech,organization,role,url,duration,location,description }: ExperienceProps) => {
   return (
-    <div className='flex flex-col w-3/4 md:1/2 justify-center items-start font-mono mt-5'>
-        <div className='flex flex-row gap-x-4 items-center justify-center'>
+    <div className='flex flex-col w-3/4 md:w-1/2 justify-center items-start font-mono mt-5'>
+        <div className='flex md:flex-row flex-col gap-x-4 items-start justify-start md:justify-center md:items-center'>
             <div>
                 <div className='text-xl flex font-bold text-green-500' >{role}</div>
             </div>
@@ -28,9 +28,9 @@ export const Experience = ({ tech,organization,role,url,duration,location,descri
             <Badge key={index} variant="custom" className=''>{tech}</Badge>
           ))}
         </div>
-        <div className='p-2'>
+        <div className='p-3 gap-y-2'>
         {description.map((desc, index) => (
-            <p key={index} className='text-sm'>- {desc}</p>
+            <p key={index} className='text-sm p-1'>- {desc}</p>
         ))}
         </div>
     </div>
