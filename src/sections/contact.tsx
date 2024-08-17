@@ -2,6 +2,8 @@
 import React from 'react';
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import { TfiEmail } from "react-icons/tfi";
+
 
 export const Contact = () => {
   return (
@@ -11,12 +13,13 @@ export const Contact = () => {
           <FaLinkedin size={25} onClick={()=> window.open('https://www.linkedin.com/in/ritwik-sharma-8714b4221/')} className='transform transition-transform hover:-translate-y-1 cursor-pointer'/>
           <FaInstagram size={25} onClick={()=> window.open('https://www.instagram.com/ritwikksharma_/')} className='transform transition-transform hover:-translate-y-1 cursor-pointer'/>
           <BsTwitterX size={25} onClick={()=> window.open('https://x.com/Ritwikshar')} className='transform transition-transform hover:-translate-y-1 cursor-pointer'/>
+          <TfiEmail size={25} onClick={()=> window.open('mailto:ritwiksharma.tech@gmail.com')} className='transform transition-transform hover:-translate-y-1 cursor-pointer' />
+
       </div>
       
       <p className='text-center'>Made with ❤️ by Ritwik Sharma</p>
-      
       <div className='text-right'>
-        <p className="font-semibold">Crafted with <u>Next.Js</u> and <u>TailwindCSS</u></p>
+        <p className="font-semibold">Crafted with <u onClick={()=> window.open('https://nextjs.org/')}>Next.Js</u> and <u>TailwindCSS</u></p>
       </div>
     </div>
   );

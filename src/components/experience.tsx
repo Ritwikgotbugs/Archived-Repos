@@ -22,7 +22,7 @@ export const Experience = ({ tech,organization,role,url,duration,location,descri
             <p className='text-xs'>{duration}</p>
         </div>
         <div className='text-md flex cursor-pointer hover:text-blue-400 transition-all ease-in-out' onClick={()=> window.open(url)}>{organization}</div>
-        <div className='text-md flex text-gray-400'>{location}</div>
+        <div className='text-md flex text-slate-500'>{location}</div>
         <div className="flex flex-wrap gap-1 py-2">
           {tech.map((tech, index) => (
             <Badge key={index} variant="custom" className=''>{tech}</Badge>
