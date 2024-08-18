@@ -12,8 +12,6 @@
     {
       "category": "Frontend",
       "tech": [
-        { "name": "HTML", "iconUrl": "/assets/html.png" },
-        { "name": "CSS", "iconUrl": "/assets/css.png" },
         { "name": "React", "iconUrl": "/assets/react.png" },
         { "name": "Next.js", "iconUrl": "/assets/next.png" },
         { "name": "TailwindCSS", "iconUrl": "/assets/tailwind.png" },
@@ -36,6 +34,7 @@
       "tech": [
         { "name": "Flutter", "iconUrl": "/assets/flutter.png" },
         { "name": "React-Native", "iconUrl": "/assets/react.png" },
+        { "name": "Dart", "iconUrl": "/assets/dart.png" },
         { "name": "Expo", "iconUrl": "/assets/expo.png" }
       ]
     },
