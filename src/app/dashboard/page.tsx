@@ -93,7 +93,7 @@ const cardData = [
 
 return (
 <div className="p-10 bg-white">
-    <h1 className="text-4xl font-bold mb-10">Start your test</h1>
+    <h1 className="text-4xl font-bold mb-10">Start Your Test</h1>
     <div className="flex flex-wrap justify-between ">
     {cardData.map((card) => (
         <div

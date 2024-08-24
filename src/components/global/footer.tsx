@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
           &copy; 2024-2029 Lorem Ipsum Limited
         </div>
         <div className="flex justify-center space-x-8 text-lg">
-          <a href="#" className="hover:underline">About</a>
+          <a href="/about" className="hover:underline">About</a>
           <a href="#" className="hover:underline">Contact</a>
           <a href="#" className="hover:underline">Help</a>
         </div>
