@@ -3,6 +3,7 @@ import Header from "@/components/global/header";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { AuthProvider } from "@/context/authContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header isLoggedIn={false} />
+        <AuthProvider>
+        <Header/>
         {children}
         <Footer />
+        </AuthProvider>
         </body>
     </html>
   );

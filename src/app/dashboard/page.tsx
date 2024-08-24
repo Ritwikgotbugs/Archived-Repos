@@ -92,13 +92,13 @@ const cardData = [
 ];
 
 return (
-<div className="p-10 bg-white">
+<div className="px-10 pb-10 bg-white">
     <h1 className="text-4xl font-bold mb-10">Start Your Test</h1>
-    <div className="flex flex-wrap justify-between ">
+    <div className="flex flex-wrap justify-between">
     {cardData.map((card) => (
         <div
         key={card.id}
-        className="bg-gray-200 rounded-lg  shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform hover:scale-105 transition-transform duration-300"
+        className="bg-gray-200 rounded-lg cursor-pointer shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform hover:scale-105 transition-transform duration-300"
         >
         <img
             src={card.imageSrc}
@@ -106,7 +106,7 @@ return (
             className="w-full h-48 object-cover"
         />
         <div className="p-6">
-            <h2 className="text-2xl font-semibold mb-2">{card.title}</h2>
+            <h2 className="text-2xl font-semibold mb-2 text-black">{card.title}</h2>
             <h3 className="text-gray-500 mb-4">{card.subtitle}</h3>
             <p className="text-gray-700 mb-4">
             {expandedCard === card.id
@@ -122,7 +122,7 @@ return (
             )}
             </p>
             <Link href={card.link}>
-            <button className="bg-[#11857D] text-white py-1 px-4 rounded-lg flex items-center justify-center hover:bg-[#11857D] w-auto">
+            <button className="bg-[#11857D] text-white py-1 px-4 rounded-md flex items-center justify-center hover:bg-[#11857D] w-auto">
                 Start ➔
             </button>
             </Link>

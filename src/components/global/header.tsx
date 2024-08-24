@@ -1,16 +1,15 @@
-
-// components/Navbar.tsx
+'use client';
+import { useRouter } from 'next/navigation';
 import React from 'react';
+import { useAuth } from '@/context/authContext';
 
-interface NavbarProps {
-  isLoggedIn: boolean;
-  username?: string;
-}
+const Header: React.FC = () => {
+  const { isLoggedIn, username } = useAuth();
+  const router = useRouter();
 
-const header: React.FC<NavbarProps> = ({ isLoggedIn, username }) => {
   return (
-    <div className="flex justify-between items-center p-4 bg-teal-800 rounded-lg mx-2">
-      <div className="w-12 h-12 bg-[brown]"></div> {/* Logo Placeholder */}
+    <div className="flex justify-between items-center p-4 bg-teal-800">
+      <div className="w-12 h-12 bg-teal-500 rounded-full"></div>
       <div className="flex items-center">
         {isLoggedIn ? (
           <div className="flex items-center text-white">
@@ -19,11 +18,17 @@ const header: React.FC<NavbarProps> = ({ isLoggedIn, username }) => {
           </div>
         ) : (
           <div className="flex gap-2">
-            <button className="bg-teal-700 text-white py-2 px-4 rounded">
+            <button
+              onClick={() => router.push('/signup')}
+              className="bg-teal-700 text-white py-2 px-4 rounded"
+            >
               Sign Up
             </button>
-            <button className="bg-white text-black py-2 px-4 rounded">
-              Sign In
+            <button
+              onClick={() => router.push('/login')}
+              className="bg-white text-black py-2 px-4 rounded"
+            >
+              Login
             </button>
           </div>
         )}
@@ -32,6 +37,4 @@ const header: React.FC<NavbarProps> = ({ isLoggedIn, username }) => {
   );
 };
 
-export default header;
-
-
+export default Header;
