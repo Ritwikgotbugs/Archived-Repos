@@ -2,9 +2,20 @@
 import Testimonials from "@/components/global/Testimonials";
 import { useRouter } from "next/navigation";
 import React from 'react';
+import { useAuth } from '@/context/authContext'; // Import useAuth
 
 const HeroSection: React.FC = () => {
   const router = useRouter();
+  const { isLoggedIn } = useAuth(); // Destructure isLoggedIn from useAuth
+
+  const handleButtonClick = () => {
+    if (isLoggedIn) {
+      router.push('/assessment'); // Redirect to assessment page if logged in
+    } else {
+      router.push('/login'); // Redirect to login page if not logged in
+    }
+  };
+
   return (
     <section className="bg-white py-12">
       <div className="container mx-auto px-4 flex flex-col items-center text-center">
@@ -15,7 +26,10 @@ const HeroSection: React.FC = () => {
         <p className="text-lg text-gray-600 mb-8">
           because <span className="font-semibold">Mental Health</span> matters!
         </p>
-        <button onClick={()=> router.push('/login')} className="bg-teal-600 text-white py-2 px-6 rounded-lg hover:bg-teal-700 transition duration-300 mb-8">
+        <button 
+          onClick={handleButtonClick} // Use the updated function
+          className="bg-teal-600 text-white py-2 px-6 rounded-lg hover:bg-teal-700 transition duration-300 mb-8"
+        >
           Get Started &rarr;
         </button>
 
@@ -62,8 +76,6 @@ const HeroSection: React.FC = () => {
       </div>
       <Testimonials />
     </section>
-
-    
   );
 };
 

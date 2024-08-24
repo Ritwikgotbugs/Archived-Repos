@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
+import { toast } from "sonner";
 
 const questions = [
   "Self-doubt; I often second guess myself",
@@ -45,51 +46,66 @@ const AssessmentPage = () => {
     if (validAnswers.length === 0) return "0%";
     const sum = validAnswers.reduce((acc: any, val: any) => acc + val, 0);
     const average = sum / validAnswers.length;
-    const percentage = (average / max)*100;
+    const percentage = (average / max) * 100;
     return percentage.toFixed(2) + "%";
-};
-  
+  };
+
   const handleSubmit = () => {
+    const unanswered = answers.includes(null);
+    if (unanswered) {
+      toast.warning("Please answer all the questions before submitting.");
+      return;
+    }
+
     const score = calculatePercentage(answers);
-  
+
     const queryParams = new URLSearchParams({ score });
     questions.forEach((_, index) => {
       if (answers[index] !== null) {
         queryParams.append(`q${index + 1}`, answers[index]!.toString());
       }
     });
-  
+
     router.push(`/result?${queryParams.toString()}`);
   };
 
   return (
-    <div className="p-8 mx-auto bg-white text-black">
-      <h1 className="text-3xl font-semibold mb-8">Imposter Phenomena Questionnaire</h1>
-      {questions.map((question, index) => (
-        <div key={index} className="mb-8">
-          <p className="mb-4 text-lg">Q{index+1}: {question}</p>
-          <div className="flex space-x-2">
-            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num, i) => (
-              <button
-                key={num}
-                className={`w-10 h-10 rounded-md text-white ${gradients[i]} ${
-                  answers[index] === num ? "ring-2 ring-offset-2 ring-teal-500" : ""
-                }`}
-                onClick={() => handleAnswerChange(index, num)}
-              >
-                {num}
-              </button>
-            ))}
+    <>
+      <div className="p-8 mx-auto bg-white text-black">
+        <h1 className="text-3xl font-semibold mb-8">Imposter Phenomena Questionnaire</h1>
+        {questions.map((question, index) => (
+          <div key={index} className="mb-8">
+            <div className='flex flex-row'>
+              <p className="mb-4 text-lg pr-5">Q{index+1}:</p>
+              <div className='flex flex-col'>
+                <p className="mb-4 text-lg">{question}</p>
+                <div className="flex space-x-5">
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num, i) => (
+                    <button
+                      key={num}
+                      className={`w-10 h-10 rounded-md text-white ${gradients[i]} ${
+                        answers[index] === num ? "ring-2 ring-offset-2 ring-yellow-500" : ""
+                      }`}
+                      onClick={() => handleAnswerChange(index, num)}
+                    >
+                      {num}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-      <button
-        className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500"
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
-    </div>
+        ))}
+      </div>
+      <div className='flex items-center justify-center p-5'>
+        <button
+          className="bg-teal-900  ease-in-out transition-all text-white px-4 py-2 rounded-md hover:bg-teal-500 flex items-center"
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      </div>
+    </>
   );
 };
 

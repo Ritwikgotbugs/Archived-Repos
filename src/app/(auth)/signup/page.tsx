@@ -48,7 +48,7 @@ export default function SignUp() {
                 className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
                 onSubmit={handleSubmit}
             >
-                <h2 className="text-2xl font-bold mb-6 text-black">Sign Up</h2>
+                <h2 className="text-2xl font-bold mb-2 text-black">Sign Up</h2>
                 {error && <p className="text-red-500 mb-4">{error}</p>}
                 <p className="text-sm text-gray-600 mb-6">
                     Already an existing user? <a href="/login" className="text-blue-500 font-semibold">Login</a>
@@ -78,9 +78,7 @@ export default function SignUp() {
                         className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
                         required
                     />
-                    <div className="text-right text-sm">
-                        <a href="/forgot-password" className="text-blue-500">Forgot password?</a>
-                    </div>
+                   
                 </div>
                 <button
                     type="submit"

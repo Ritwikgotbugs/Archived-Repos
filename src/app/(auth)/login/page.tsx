@@ -4,6 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useRouter } from 'next/navigation';
 import { auth, googleProvider } from '../../../firebase/client'; 
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { toast } from 'sonner'; // Import toast from sonner
 
 export default function SignUp() {
     const [email, setEmail] = useState("");
@@ -15,8 +16,17 @@ export default function SignUp() {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             router.replace('/assessment');
-        } catch (error) {
+            toast.success('Successfully signed in');
+        } catch (error: any) { 
             console.error("Error signing in:", error);
+            if (error.code === 'auth/wrong-password' ||  error.code === 'auth/invalid-email' || error.code === 'auth/invalid-credentials') {
+                toast.error("Invalid email or password. Please try again.");
+            } else if (error.code === 'auth/user-not-found') {
+                toast.error("User does not exist. Please sign up.");
+            } 
+            else {
+                toast.error("Failed to sign in. Please try again later.");
+            }
         }
     };
 
@@ -24,8 +34,10 @@ export default function SignUp() {
         try {
             await signInWithPopup(auth, googleProvider);
             router.replace('/assessment');
+            toast.success('Successfully signed in with Google');
         } catch (error) {
             console.error("Error signing in with Google:", error);
+            toast.error("Failed to sign in with Google. Please try again.");
         }
     };
 
@@ -64,6 +76,9 @@ export default function SignUp() {
                         className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-600"
                         required
                     />
+                     <div className="text-right text-sm p-2">
+                        <a href="/forgot-password" className="text-blue-500">Forgot password?</a>
+                    </div>
                 </div>
                 <button
                     type="submit"

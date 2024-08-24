@@ -1,6 +1,7 @@
 'use client';
-
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
+import { onAuthStateChanged, User } from 'firebase/auth';
+import { auth } from '@/firebase/client';
 
 interface AuthContextType {
   isLoggedIn: boolean;
@@ -22,7 +23,22 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState<string | undefined>(undefined);
 
-  const logout = () => {
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user: User | null) => {
+      if (user) {
+        setIsLoggedIn(true);
+        setUsername(user.displayName || user.email || 'User');
+      } else {
+        setIsLoggedIn(false);
+        setUsername(undefined);
+      }
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const logout = async () => {
+    await auth.signOut();
     setIsLoggedIn(false);
     setUsername(undefined);
   };

@@ -93,12 +93,12 @@ const cardData = [
 
 return (
 <div className="px-10 pb-10 bg-white">
-    <h1 className="text-4xl font-bold mb-10">Start Your Test</h1>
+    <h1 className="text-4xl font-bold my-10">Start Your Test</h1>
     <div className="flex flex-wrap justify-between">
     {cardData.map((card) => (
         <div
         key={card.id}
-        className="bg-gray-200 rounded-lg cursor-pointer shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform hover:scale-105 transition-transform duration-300"
+        className="bg-gray-200 rounded-md cursor-pointer shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform hover:scale-105 transition-transform duration-300"
         >
         <img
             src={card.imageSrc}
