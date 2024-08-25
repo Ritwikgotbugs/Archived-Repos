@@ -2,38 +2,36 @@
 import Testimonials from "@/components/global/Testimonials";
 import { useRouter } from "next/navigation";
 import React from 'react';
-import { useAuth } from '@/context/authContext'; // Import useAuth
+import { useAuth } from '@/context/authContext'; 
 
 const HeroSection: React.FC = () => {
   const router = useRouter();
-  const { isLoggedIn } = useAuth(); // Destructure isLoggedIn from useAuth
+  const { isLoggedIn } = useAuth(); 
 
   const handleButtonClick = () => {
     if (isLoggedIn) {
-      router.push('/assessment'); // Redirect to assessment page if logged in
+      router.push('/assessment'); 
     } else {
-      router.push('/login'); // Redirect to login page if not logged in
+      router.push('/login');
     }
   };
 
   return (
     <section className="bg-white py-12">
-      <div className="container mx-auto px-4 flex flex-col items-center text-center">
-        {/* Hero Title and Button */}
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">
+      <div className="container mx-auto md:px-4 px-8 flex flex-col items-center text-center">
+        <h1 className="md:text-4xl text-2xl font-bold text-gray-800 mb-2">
           PATH TO SELF-DISCOVERY
         </h1>
         <p className="text-lg text-gray-600 mb-8">
           because <span className="font-semibold">Mental Health</span> matters!
         </p>
         <button 
-          onClick={handleButtonClick} // Use the updated function
+          onClick={handleButtonClick} 
           className="bg-teal-600 text-white py-2 px-6 rounded-lg hover:bg-teal-700 transition duration-300 mb-8"
         >
           Get Started &rarr;
         </button>
 
-        {/* Hero Image */}
         <div className="flex justify-center mb-12">
           <img
             src="./image 2.png"
@@ -42,7 +40,6 @@ const HeroSection: React.FC = () => {
           />
         </div>
 
-        {/* New Text Content */}
         <div className="text-left align-baseline max-w-4xl">
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Tackling Impostor Phenomena – a step out for a better life

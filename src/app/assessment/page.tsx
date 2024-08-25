@@ -19,16 +19,16 @@ const questions = [
 ];
 
 const gradients = [
-  "bg-teal-500",
+  "bg-teal-900",
+  "bg-teal-800",
+  "bg-teal-800",
+  "bg-teal-700",
+  "bg-teal-700",
   "bg-teal-600",
-  "bg-teal-700",
-  "bg-teal-700",
-  "bg-teal-800",
-  "bg-teal-800",
-  "bg-teal-800",
-  "bg-teal-900",
-  "bg-teal-900",
-  "bg-teal-950",
+  "bg-teal-600",
+  "bg-teal-500",
+  "bg-teal-500",
+  "bg-teal-400"
 ];
 
 const AssessmentPage = () => {
@@ -71,35 +71,35 @@ const AssessmentPage = () => {
 
   return (
     <>
-      <div className="p-8 mx-auto bg-white text-black">
-        <h1 className="text-3xl font-semibold mb-8">Imposter Phenomena Questionnaire</h1>
+      <div className="p-8 mx-auto bg-white text-black max-w-3xl">
+        <h1 className="text-3xl font-semibold mb-8 text-center">Imposter Phenomena Questionnaire</h1>
         {questions.map((question, index) => (
           <div key={index} className="mb-8">
-            <div className='flex flex-row'>
-              <p className="mb-4 text-lg pr-5">Q{index+1}:</p>
-              <div className='flex flex-col'>
-                <p className="mb-4 text-lg">{question}</p>
-                <div className="flex space-x-5">
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num, i) => (
-                    <button
-                      key={num}
-                      className={`w-10 h-10 rounded-md text-white ${gradients[i]} ${
-                        answers[index] === num ? "ring-2 ring-offset-2 ring-yellow-500" : ""
-                      }`}
-                      onClick={() => handleAnswerChange(index, num)}
-                    >
-                      {num}
-                    </button>
-                  ))}
-                </div>
-              </div>
+            <p className="mb-4 text-lg">{`Q${index + 1}: ${question}`}</p>
+            <div className="flex justify-center gap-x-2 gap-y-2 flex-wrap md:justify-between">
+              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num, i) => (
+                <button
+                  key={num}
+                  className={`w-10 h-10 rounded-md text-white ${gradients[i]} ${
+                    answers[index] === num ? "ring-2 ring-offset-2 ring-yellow-500" : ""
+                  }`}
+                  onClick={() => handleAnswerChange(index, num)}
+                >
+                  {num}
+                </button>
+              ))}
+            </div>
+            <div className='mt-4 flex justify-between text-sm font-semibold'>
+              <p>Most Likely</p>
+              <p>Somewhat</p>
+              <p>Least Likely</p>
             </div>
           </div>
         ))}
       </div>
       <div className='flex items-center justify-center p-5'>
         <button
-          className="bg-teal-900  ease-in-out transition-all text-white px-4 py-2 rounded-md hover:bg-teal-500 flex items-center"
+          className="bg-teal-900 transition-all text-white px-4 py-2 rounded-md hover:bg-teal-500"
           onClick={handleSubmit}
         >
           Submit
