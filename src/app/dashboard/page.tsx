@@ -20,7 +20,7 @@ const cardData = [
     fullDescription:
     "Impostor syndrome (also commonly-termed impostor phenomenon, fraud syndrome, impostors, and perceived frauds) refers to a pattern of behavior where individuals doubt their accomplishments and have a persistent fear of being exposed as a fraud. Despite external evidence of their competence, those experiencing this phenomenon remain convinced that they are frauds and do not deserve all they have achieved.",
     imageSrc: "/stages/Facts.png",
-    link: "/stage-1",
+    link: "/FactorPage",
 },
 {
     id: "feelings",
@@ -42,7 +42,7 @@ const cardData = [
     fullDescription:
     "We often forget to celebrate success either because we feel others have to recognize it to celebrate it. The reality is, success should be personally acknowledged and celebrated, no matter how small. Recognizing your achievements is key to building confidence and continuing your growth journey.",
     imageSrc: "/stages/success.png",
-    link: "/success-test",
+    link: "/success",
 },
 {
     id: "Perfectionism",
@@ -64,7 +64,7 @@ const cardData = [
     fullDescription:
     "Failure is defined as the gap between what is expected or desired and what is actually experienced – Henry et al 2019 ",
     imageSrc: "/stages/down.png",
-    link: "/letdowns-test",
+    link: "/let-downs",
 },
 {
     id: "Self Compassion",
