@@ -21,7 +21,7 @@ const cardData = [
     fullDescription:
     "Impostor syndrome (also commonly-termed impostor phenomenon, fraud syndrome, impostors, and perceived frauds) refers to a pattern of behavior where individuals doubt their accomplishments and have a persistent fear of being exposed as a fraud. Despite external evidence of their competence, those experiencing this phenomenon remain convinced that they are frauds and do not deserve all they have achieved.",
     imageSrc: "/stages/Facts.png",
-    link: "/facts-test",
+    link: "/stage-1",
 },
 {
     id: "feelings",
@@ -32,7 +32,7 @@ const cardData = [
     fullDescription:
     "Now let's do some inward tracking of self – Below are a few words. Kindly select the words that closely relate to you or define your current emotional state. This is an important exercise in self-awareness and emotional intelligence, helping you better understand and articulate your feelings.",
     imageSrc: "/stages/Feelings.png",
-    link: "/feelings-test",
+    link: "/stage-2",
 },
 {
     id: "success",
@@ -43,7 +43,7 @@ const cardData = [
     fullDescription:
     "We often forget to celebrate success either because we feel others have to recognize it to celebrate it. The reality is, success should be personally acknowledged and celebrated, no matter how small. Recognizing your achievements is key to building confidence and continuing your growth journey.",
     imageSrc: "/stages/success.png",
-    link: "/success-test",
+    link: "/stage-3",
 },
 {
     id: "Perfectionism",
@@ -54,7 +54,7 @@ const cardData = [
     fullDescription:
     "Perfectionism is a personality characteristic, which is defined as “striving for flawlessness and setting exceedingly high standards for performance, accompanied by tendencies for overly critical evaluations” (Stoeber, 2011).",
     imageSrc: "/stages/perfect.png",
-    link: "/perfectionism-test",
+    link: "/stage-4",
 },
 {
     id: "The let downs",
@@ -65,7 +65,7 @@ const cardData = [
     fullDescription:
     "Failure is defined as the gap between what is expected or desired and what is actually experienced – Henry et al 2019 ",
     imageSrc: "/stages/down.png",
-    link: "/letdowns-test",
+    link: "/stage-5",
 },
 {
     id: "Self Compassion",
@@ -76,7 +76,7 @@ const cardData = [
     fullDescription:
     " “the awareness that arises from paying attention, on purpose, in the present moment and non-judgmentally.- Jon Kabat – Zinn ",
     imageSrc: "/stages/self.png",
-    link: "/selfcompassion-test",
+    link: "/stage-6",
 },
 {
     id: "Acceptance",
@@ -87,7 +87,7 @@ const cardData = [
     fullDescription:
     "During “Acceptance,” one is open to the reality of the present moment without being in a state of belief or disbelief (Roemer & Orsillo, 2003). Acceptance is a key component of mindfulness and is the ability to be present in the moment without judgment.",
     imageSrc: "/stages/accept.png",
-    link: "/acceptance-test",
+    link: "/stage-7",
 },
 ];
 
