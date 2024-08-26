@@ -32,8 +32,7 @@ const Result: React.FC = () => {
         Get Started
       </button>
 
-      {/* Boxes Section */}
-      <div className="mt-12 grid grid-cols-4 gap-4">
+      <div className="mt-12 grid md:grid-cols-4 grid-cols-1 gap-4">
         <div className={`p-4 rounded-md ${getBoxClass(0, 29)}`}>
           <h2 className="text-xl font-semibold">0% - 29%</h2>
           <p>Negligible</p>

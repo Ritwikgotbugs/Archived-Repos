@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useRouter } from 'next/navigation';
 import { auth, googleProvider } from '../../../firebase/client'; 
 import { signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
-import { toast } from 'sonner'; // Import toast from sonner
+import { toast } from 'sonner';
 
 export default function SignUp() {
     const [email, setEmail] = useState("");
@@ -42,9 +42,9 @@ export default function SignUp() {
     };
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="flex justify-center items-start bg-gray-100 md:p-0 p-6 ">
             <form
-                className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
+                className="bg-white p-8 rounded-lg shadow-md w-full max-w-md border-2 border-teal-800 my-10"
                 onSubmit={handleSubmit}
             >
                 <h2 className="text-2xl font-bold mb-2 text-black">Login</h2>

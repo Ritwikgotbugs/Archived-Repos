@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Dashboard = () => {
-// State to track which card is expanded
 const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
 const handleToggle = (cardId: string) => {
@@ -43,7 +42,7 @@ const cardData = [
     fullDescription:
     "We often forget to celebrate success either because we feel others have to recognize it to celebrate it. The reality is, success should be personally acknowledged and celebrated, no matter how small. Recognizing your achievements is key to building confidence and continuing your growth journey.",
     imageSrc: "/stages/success.png",
-    link: "/stage-3",
+    link: "/success-test",
 },
 {
     id: "Perfectionism",
@@ -65,7 +64,7 @@ const cardData = [
     fullDescription:
     "Failure is defined as the gap between what is expected or desired and what is actually experienced – Henry et al 2019 ",
     imageSrc: "/stages/down.png",
-    link: "/stage-5",
+    link: "/letdowns-test",
 },
 {
     id: "Self Compassion",
