@@ -3,7 +3,8 @@
 import { useRouter } from 'next/navigation';
 import React from 'react';
 import { useAuth } from '@/context/authContext';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { FaUserCircle } from "react-icons/fa";
+
 
 const Header: React.FC = () => {
   const { isLoggedIn, username, logout } = useAuth();
@@ -17,10 +18,7 @@ const Header: React.FC = () => {
   return (
     <div className="flex justify-between items-center p-4 bg-teal-800">
       <div className="flex items-center gap-4">
-        <Avatar>
-          <AvatarImage src="https://github.com/shadcn.png" />
-          <AvatarFallback>CN</AvatarFallback>
-        </Avatar>
+      <FaUserCircle  size={40} color='white'/>
         {isLoggedIn && (
           <span className='text-2xl text-white'>Welcome, {username}</span>
         )}

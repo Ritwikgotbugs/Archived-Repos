@@ -2,6 +2,7 @@
 import React, { useState, KeyboardEvent, ChangeEvent } from "react";
 import { toast } from "sonner";
 import { useBadgeStore } from '../../store'; 
+import { Badge } from "../ui/badge";
 
 export default function BadgeInput() {
   const [text, setText] = useState<string>("");
@@ -35,17 +36,17 @@ export default function BadgeInput() {
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      <div className="space-x-2 space-y-2 flex-col">
+      <div className="space-x-2 space-y-2 flex-col items-center justify-center">
         {badges.map((badge, index) => (
-          <div key={index} className="inline-block items-center justify-between bg-teal-100 text-teal-900 rounded-full px-3 py-1">
+          <Badge key={index} variant={"secondary"} className="hover:bg-teal-100 inline-block items-center justify-between bg-teal-100 text-teal-900 rounded-full px-3 py-1 text-xl">
             <span>{badge}</span>
             <button
-              className="ml-5 text-teal-900 hover:text-red-600"
+              className="ml-5 text-teal-900 hover:text-red-600 font-bold text-xl"
               onClick={() => removeBadge(index)}
             >
               &times;
             </button>
-          </div>
+          </Badge>
         ))}
       </div>
     </div>

@@ -2,11 +2,16 @@
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export default function LetDowns() {
   const Router = useRouter();
   return (
-    <div className="p-10 md:p-6 bg-gray-100">
+    <>
+    <div onClick={()=> Router.back()} className=''>
+      <IoIosArrowRoundBack className='text-4xl cursor-pointer bg-teal-500 rounded-full inline-block p-1 text-white relative mx-4 mt-4' />
+    </div>
+    <div className="px-10 pb-10 md:justify-center items-center flex flex-col">
       <h1 className="text-3xl font-bold mb-4">Failure</h1>
       <h2 className="text-xl font-semibold text-slate-500 mb-2">The let downs - gives us steps to stand on</h2>
       <p className="text-gray-800 mb-6">
@@ -16,7 +21,7 @@ export default function LetDowns() {
         So today we are learning on the go so let's learn a few definitions.
       </p>
       <h3 className="text-lg font-semibold text-gray-700 mb-2">Based on mindset theory:</h3>
-      <ul className="list-disc list-inside text-gray-800 mb-6">
+      <ul className="list-disc list-inside text-gray-800 mb-6 md:px-20">
         <li><strong>Individuals have a fixed mindset</strong> - they believe that intelligence and capacity for specific abilities are unchangeable traits. (Dweck, 2000, 2006)</li>
         <li>
           <strong>Those with growth mindset</strong> - believing that these qualities are malleable and that the
@@ -40,5 +45,6 @@ export default function LetDowns() {
         <Button onClick={()=>Router.push('/')} variant={'outline'} className='border-2 border-teal-900 mt-2'>Back to Home Page</Button>
     </div>
     </div>
+    </>
   );
 }
