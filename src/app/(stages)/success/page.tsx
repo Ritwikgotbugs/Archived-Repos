@@ -5,13 +5,20 @@ import React from 'react';
 import { useBadgeStore } from '../../../store';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 
 export default function Success() {
   const router = useRouter();
   const badges = useBadgeStore((state) => state.badges);
 
   return (
-    <div className="p-8 mx-auto max-w-4xl bg-white text-black">
+    <>
+    <div onClick={()=> router.back()} className='text-4xl cursor-pointer bg-teal-500 rounded-full inline-block p-1 text-white relative mx-4 mt-4'>
+      <IoIosArrowRoundBack />
+    </div>
+    
+    <div className="px-8 pb-8 mx-auto max-w-4xl bg-white text-black">
       <h1 className="text-3xl font-semibold mb-4">Success</h1>
 
       <p className="text-lg mb-6 text-slate-500 font-bold">
@@ -76,5 +83,6 @@ export default function Success() {
 
     </div>
     </div>
+    </>
   );
 }
