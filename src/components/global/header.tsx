@@ -22,7 +22,7 @@ const Header: React.FC = () => {
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
         {isLoggedIn && (
-          <span className='text-2xl text-white'>Welcome, {username}</span>
+          <span className='text-xl text-white'>Welcome, {username}</span>
         )}
       </div>
       <div className="flex items-center">
