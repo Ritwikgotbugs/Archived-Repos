@@ -31,7 +31,7 @@ if (localText && selectedFiles.length) {
     setText(localText);
     setImages(selectedFiles);
     console.log('Form submitted', { text: localText, selectedFiles });
-    router.push('/dashboard'); 
+    router.push('/post-stage'); 
 } else {
     toast.info('Please fill all the fields');
 }
@@ -50,7 +50,7 @@ return (
     </p>
 
     <textarea
-    className="w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500"
+    className="w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-700"
     rows={5}
     placeholder="Share your thoughts or facts here..."
     value={localText}
@@ -98,7 +98,7 @@ return (
     </Button>
     <p className="font-light text-slate-500 text-sm mt-3 cursor-pointer">Report a problem?</p>
     <Button
-        onClick={() => router.push('/')}
+        onClick={() => router.push('/dashboard')}
         variant="outline"
         className="border-2 border-teal-900 mt-2"
     >
