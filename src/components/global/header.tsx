@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       <div className="flex items-center gap-4">
       <FaUserCircle  size={40} color='white'/>
         {isLoggedIn && (
-          <span className='text-2xl text-white'>Welcome, {username}</span>
+          <span className='md:text-2xl text-md text-white'>Welcome, {username}</span>
         )}
       </div>
       <div className="flex items-center">
