@@ -40,7 +40,7 @@ export default function LetDowns() {
         Let's start the journey of self-discovery: the following is adapted from (Henry, M. A., Shorter, S., Charkoudian, L., Heemstra, J. M., & Corwin, L. A. (2019). FAIL is not a four-letter word: A theoretical framework for exploring undergraduate students' approaches to academic challenge and responses to failure in STEM learning environments. CBE—Life Sciences Education, 18(1), ar11.)
       </p>
       <div className='flex items-center justify-center flex-col mt-20'>
-        <Button onClick={()=> Router.push('/dashboard')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
+        <Button onClick={()=> Router.push('/post-stage?origin=5')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
         <p className='font-light text-slate-500 text-sm mt-3 cursor-pointer'>Report a problem?</p>
         <Button onClick={()=>Router.push('/')} variant={'outline'} className='border-2 border-teal-900 mt-2'>Back to Home Page</Button>
     </div>

@@ -73,7 +73,7 @@ export default function Success() {
       </div>
       <div className='flex items-center justify-center flex-col'>
         {badges.length == 3 ? (
-            <Button onClick={()=> router.push('/dashboard')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
+            <Button onClick={()=> router.push('/post-stage?origin=3')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
         ):(
             <Button onClick={()=> toast.info('Please fill all the fields')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
         ) }
