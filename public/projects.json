@@ -24,5 +24,14 @@
     "url": "https://cli-mate-react.netlify.app/",
     "stack": ["React","ViteJs", "Tailwind CSS"]
 
+  },
+  {
+    "title": "Edith AI",
+    "subtitle": "A chatbot which increases organizational efficiency",
+    "img": "/assets/edith.png",
+    "githubUrl": "https://github.com/Ritwikgotbugs/Edith-chatbot",
+    "url": "https://edith-chatbot.vercel.app/",
+    "stack": ["AWS (EC2)","Docker", "Firebase","Flask","NextJs"]
+
   }
 ]

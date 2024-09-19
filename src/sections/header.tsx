@@ -35,7 +35,7 @@ export default function Header() {
         <button
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1I5Ywegg92gIkU0qHbraPk51ere9mHPIf/view?usp=sharing'
+              'https://drive.google.com/file/d/1vadKYROs_0LvN7R27LxN4NMSUcqlUnSH/view?usp=sharing'
             )
           }
           className="bg-purple-700 hover:bg-purple-600 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
@@ -54,7 +54,7 @@ export default function Header() {
         <button
           onClick={() =>
             window.open(
-              'https://drive.google.com/file/d/1I5Ywegg92gIkU0qHbraPk51ere9mHPIf/view?usp=sharing'
+              'https://drive.google.com/file/d/1vadKYROs_0LvN7R27LxN4NMSUcqlUnSH/view?usp=sharing'
             )
           }
           className="bg-purple-700 hover:bg-purple-600 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
