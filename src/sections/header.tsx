@@ -57,7 +57,7 @@ export default function Header() {
               'https://drive.google.com/file/d/1vadKYROs_0LvN7R27LxN4NMSUcqlUnSH/view?usp=sharing'
             )
           }
-          className="bg-purple-700 hover:bg-purple-600 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
+          className="bg-blue-800 hover:bg-blue-700 text-white py-1 px-2 md:py-2 md:px-4 rounded-full text-sm md:text-base"
         >
           Résumé
         </button>
@@ -71,7 +71,7 @@ export default function Header() {
               key={item.name}
               className={`text-white hover:text-gray-300 p-2 md:p-2 rounded-lg transition-all ease-in-out duration-500 ${
                 active === item.path || (item.path === '#contact' && active === '/')
-                  ? "bg-purple-700"
+                  ? "bg-blue-700"
                   : ''
               }`}
               onClick={() => {

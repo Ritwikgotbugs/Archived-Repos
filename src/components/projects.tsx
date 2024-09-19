@@ -17,7 +17,7 @@ interface ProjectsTileProps {
 export const  ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: ProjectsTileProps) => {
 
   return (
-    <div className="bg-secondary cursor-pointer rounded-xl w-80 h-96 flex flex-col justify-between border-transparent border-2 hover:border-purple-500 transition-all transform hover:scale-105 hover:shadow-lg">
+    <div className="bg-secondary cursor-pointer rounded-xl w-80 h-96 flex flex-col justify-between border-transparent border-2 hover:border-blue-500 transition-all transform hover:scale-105 hover:shadow-lg">
       <div className='px-6 pt-6 flex-grow'>
         <h1 className='text-xl font-bold text-white font-mono'>{title}</h1>
         <h2 className='text-sm pb-2 text-white font-mono'>{subtitle}</h2>
@@ -27,7 +27,7 @@ export const  ProjectsTile = ({ title, subtitle, img, githubUrl, url, stack }: P
         
         <div className="flex flex-wrap gap-1 font-mono ">
           {stack.map((tech, index) => (
-            <Badge variant="destructive" key={index} className=' bg-purple-900 rounded-full px-3 py-1'>{tech}</Badge>
+            <Badge variant="blue" key={index} className='rounded-3xl px-3 py-1'>{tech}</Badge>
 
           ))}
         </div>

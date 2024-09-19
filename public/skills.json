@@ -14,8 +14,7 @@
       "tech": [
         { "name": "React", "iconUrl": "/assets/react.png" },
         { "name": "Next.js", "iconUrl": "/assets/next.png" },
-        { "name": "TailwindCSS", "iconUrl": "/assets/tailwind.png" },
-        { "name": "ViteJS", "iconUrl": "/assets/vitejs.png" }
+        { "name": "TailwindCSS", "iconUrl": "/assets/tailwind.png" }
       ]
     },
     {
@@ -24,7 +23,7 @@
         { "name": "Node.js", "iconUrl": "/assets/node.png" },
         { "name": "Express", "iconUrl": "/assets/express.png" },
         { "name": "Firebase", "iconUrl": "/assets/firebase.png" },
-        { "name": "Supabase", "iconUrl": "/assets/supabase.png" },
+        { "name": "Flask", "iconUrl": "/assets/flask.jpg" },
         { "name": "MongoDB", "iconUrl": "/assets/mongo.png" },
         { "name": "PostgreSQL", "iconUrl": "/assets/postgres.png" }
       ]
@@ -34,16 +33,15 @@
       "tech": [
         { "name": "Flutter", "iconUrl": "/assets/flutter.png" },
         { "name": "React-Native", "iconUrl": "/assets/react.png" },
-        { "name": "Dart", "iconUrl": "/assets/dart.png" },
-        { "name": "Expo", "iconUrl": "/assets/expo.png" }
+        { "name": "Dart", "iconUrl": "/assets/dart.png" }
       ]
     },
     {
-      "category": "Tools & others",
+      "category": "DevOps & Tools",
       "tech": [
-        { "name": "Git", "iconUrl": "/assets/git.png" },
-        { "name": "Postman", "iconUrl": "/assets/postman.png" },
-        { "name": "Vercel", "iconUrl": "/assets/vercel.png" }
+        { "name": "AWS", "iconUrl": "/assets/aws.png" },
+        { "name": "Docker", "iconUrl": "/assets/docker.png" },
+        { "name": "Postman", "iconUrl": "/assets/postman.png" }
       ]
     }
   ]

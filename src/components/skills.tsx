@@ -22,7 +22,7 @@ export const Skills = ({ skills }: SkillsProps) => {
         {skills.map((skill, index) => (
           <Tooltip key={index}>
             <TooltipTrigger>
-              <div className="bg-secondary text-white rounded-lg p-2 flex flex-col items-center justify-between border-2 border-transparent hover:border-purple-600 transition-all transform hover:scale-105 hover:shadow-lg">
+              <div className="bg-secondary text-white rounded-lg p-2 flex flex-col items-center justify-between border-2 border-transparent hover:border-blue-600 transition-all transform hover:scale-105 hover:shadow-lg">
                 <img src={skill.iconUrl} alt={skill.name} className="w-8 h-8" />
               </div>
             </TooltipTrigger>
