@@ -1,17 +1,23 @@
 'use client';
 import BadgeInput from '@/components/global/badgeInput';
-import { useRouter } from 'next/navigation';
-import React from 'react';
-import { useBadgeStore } from '../../../store';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { toast } from 'sonner';
+import { useBadgeStore } from '../../../store';
+
 
 export default function Success() {
   const router = useRouter();
   const badges = useBadgeStore((state) => state.badges);
 
   return (
-    <div className="p-8 mx-auto max-w-4xl bg-white text-black">
+    <>
+    <div onClick={()=> router.back()} className='text-4xl cursor-pointer bg-teal-500 rounded-full inline-block p-1 text-white relative mx-4 mt-4'>
+      <IoIosArrowRoundBack />
+    </div>
+    
+    <div className="px-8 pb-8 mx-auto max-w-4xl bg-white text-black">
       <h1 className="text-3xl font-semibold mb-4">Success</h1>
 
       <p className="text-lg mb-6 text-slate-500 font-bold">
@@ -66,7 +72,7 @@ export default function Success() {
       </div>
       <div className='flex items-center justify-center flex-col'>
         {badges.length == 3 ? (
-            <Button onClick={()=> router.push('/dashboard')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
+            <Button onClick={()=> router.push('/post-stage?origin=3')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
         ):(
             <Button onClick={()=> toast.info('Please fill all the fields')} className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
         ) }
@@ -76,5 +82,7 @@ export default function Success() {
 
     </div>
     </div>
+    </>
   );
 }
+
