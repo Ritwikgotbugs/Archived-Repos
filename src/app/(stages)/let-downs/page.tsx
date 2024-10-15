@@ -56,9 +56,9 @@ export default function Home() {
 
       {/* Word selection with multiple lists */}
       <WordSelection
-        lists={[wordsList1, wordsList2]}  // Pass both word lists
-        maxSelection={9}                  // Max number of words per list
-        userName="defaultUser"            // Add userName property
+        lists={[wordsList1, wordsList2]}  
+        maxSelection={9}                 
+        userName="defaultUser"            
       />
       <div className='flex items-center justify-center flex-col'>
 <Button  className="bg-teal-900 text-white py-2 rounded-lg flex items-center justify-center hover:bg-teal-700 my-4 px-6 text-lg"> Submit</Button>
