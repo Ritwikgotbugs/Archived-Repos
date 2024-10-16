@@ -2,7 +2,6 @@
 import BadgeInput from '@/components/global/badgeInput';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/navigation';
-import { IoIosArrowRoundBack } from "react-icons/io";
 import { toast } from 'sonner';
 import { useBadgeStore } from '../../../store';
 import { IoIosArrowRoundBack } from "react-icons/io";

@@ -40,7 +40,7 @@ export default function SignUp() {
             toast.error("Failed to sign in with Google. Please try again.");
         }
     };
-
+    
     return (
         <div className="flex justify-center items-start bg-gray-100 md:p-0 p-6 ">
             <form

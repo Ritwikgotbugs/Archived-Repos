@@ -51,7 +51,7 @@ const FactorPage = () => {
       </p>
 
       <textarea
-        className="w-full p-2 mb-4 border rounded-md focus:outline-none focus:ring-2 focus:ring-teal-700"
+        className="w-full p-2 mb-4 border-2 rounded-md focus:outline-none focus:border-2 focus:border-slate-700"
         rows={5}
         placeholder="Share your thoughts or facts here..."
         value={localText}
