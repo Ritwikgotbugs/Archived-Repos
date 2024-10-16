@@ -1,4 +1,5 @@
 'use client';
+
 import { Button } from "@/components/ui/button";
 import { db } from "@/firebase/client";
 import { addDoc, collection } from "firebase/firestore";
@@ -154,6 +155,3 @@ import { useState } from "react";
     };
 
     export default Home;
-
-
-

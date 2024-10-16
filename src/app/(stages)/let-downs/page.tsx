@@ -1,6 +1,9 @@
  'use client';
 import WordSelection from '@/components/global/WordSelection';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
+import React from 'react';
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
 export default function Home() {
   const wordsList1 = [

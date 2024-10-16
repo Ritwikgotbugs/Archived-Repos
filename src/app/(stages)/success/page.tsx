@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { toast } from 'sonner';
 import { useBadgeStore } from '../../../store';
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 
 
 export default function Success() {
