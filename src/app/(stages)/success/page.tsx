@@ -1,11 +1,12 @@
 'use client';
 import BadgeInput from '@/components/global/badgeInput';
-import { useRouter } from 'next/navigation';
-import React from 'react';
-import { useBadgeStore } from '../../../store';
 import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
+import { useRouter } from 'next/navigation';
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { toast } from 'sonner';
+import { useBadgeStore } from '../../../store';
+import { IoIosArrowRoundBack } from "react-icons/io";
+
 
 
 export default function Success() {
@@ -86,3 +87,4 @@ export default function Success() {
     </>
   );
 }
+

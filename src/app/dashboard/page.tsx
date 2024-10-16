@@ -86,7 +86,7 @@ const cardData = [
     fullDescription:
     "During “Acceptance,” one is open to the reality of the present moment without being in a state of belief or disbelief (Roemer & Orsillo, 2003). Acceptance is a key component of mindfulness and is the ability to be present in the moment without judgment.",
     imageSrc: "/stages/accept.png",
-    link: "/acceptance?stage=7",
+    link: "/acceptance",
 },
 ];
 
