@@ -39,7 +39,7 @@ const FactorPage = () => {
   };
 
   return (
-    <div className="p-8 mx-auto max-w-4xl bg-white text-black ">
+    <div className="p-8 mx-auto max-w-4xl bg-white text-black rounded-3xl ">
       <h1 className="text-3xl font-semibold mb-4">Facts</h1>
       <h2 className="text-xl font-semibold mb-2 text-slate-500">The F Factor</h2>
       <p className="text-lg mb-6 text-black">

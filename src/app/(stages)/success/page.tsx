@@ -14,12 +14,9 @@ export default function Success() {
 
   return (
     <>
-    <div onClick={()=> router.back()} className='text-4xl cursor-pointer bg-teal-500 rounded-full inline-block p-1 text-white relative mx-4 mt-4'>
-      <IoIosArrowRoundBack />
-    </div>
     
     <div className="px-8 pb-8 mx-auto max-w-4xl bg-white text-black">
-      <h1 className="text-3xl font-semibold mb-4">Success</h1>
+      <h1 className="text-3xl font-semibold mb-4 mt-5">Success</h1>
 
       <p className="text-lg mb-6 text-slate-500 font-bold">
         Looking for S .. because it's always there .. just look harder

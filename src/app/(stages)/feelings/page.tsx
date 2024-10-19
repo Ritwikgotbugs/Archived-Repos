@@ -65,14 +65,15 @@ export default function Page() {
 
   return (
     <>
-    <div className='flex flex-col bg-gray-100 px-10 pt-10'>
+    <div className='flex items-center justify-center flex-col bg-gray-100'>
+    <div className='flex flex-col px-10 pt-10 max-w-3xl rounded-xl'>
       <h1 className="text-3xl font-semibold mb-2">Feelings</h1>
       <h2 className="text-xl font-semibold mb-2 text-slate-500">Feelings - The Lingering F</h2>
       <p className="text-lg mb-4 text-black">
       Now lets do some inward tracking of self – Below are few words kindly self the words that closely relate you or are in reference to you.
       </p>
     </div>
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex flex-col items-center justify-center min-h-screen max-w-3xl">
       
       <div className="items-center px-5">
         <div className="grid grid-cols-1 md:grid-cols-1 gap-2">
@@ -99,6 +100,7 @@ export default function Page() {
           Back to Home Page
         </Button>
       </div>
+    </div>
     </div>
     </>
   );
