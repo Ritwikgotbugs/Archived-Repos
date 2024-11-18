@@ -25,6 +25,15 @@ const highlightKeywords = [
 
 
 export const Experience = ({ tech,organization,role,url,duration,location,description }: ExperienceProps) => {
+  const highlightText = (text: string) => {
+    let modifiedText = text;
+    highlightKeywords.forEach((keyword) => {
+      const regex = new RegExp(`(${keyword})`, 'gi');
+      modifiedText = modifiedText.replace(regex, '<span class="text-green-500">$1</span>');
+    });
+    return modifiedText;
+  };
+
   return (
     <div className='flex flex-col w-3/4 md:w-1/2 justify-center items-start font-mono mt-5'>
         <div className='flex md:flex-row flex-col gap-x-4 items-start justify-start md:justify-center md:items-center'>
@@ -41,19 +50,13 @@ export const Experience = ({ tech,organization,role,url,duration,location,descri
           ))}
         </div>
         <div className='p-3 gap-y-2'>
-          {description.map((desc, index) => {
-            const containsHighlight = highlightKeywords.some(keyword =>
-              desc.includes(keyword)
-            );
-
-            return (
-              <p
-                key={index}
-                className={`text-sm p-1 ${containsHighlight ? 'text-green-500' : ''}`}>
-                - {desc}
-              </p>
-            );
-          })}
+          {description.map((desc, index) => (
+            <p
+              key={index}
+              className='text-sm p-1'
+              dangerouslySetInnerHTML={{ __html: highlightText(desc) }}
+            />
+          ))}
         </div>
     </div>
   );
