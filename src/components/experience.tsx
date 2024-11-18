@@ -29,7 +29,7 @@ export const Experience = ({ tech,organization,role,url,duration,location,descri
     let modifiedText = text;
     highlightKeywords.forEach((keyword) => {
       const regex = new RegExp(`(${keyword})`, 'gi');
-      modifiedText = modifiedText.replace(regex, '<span class="text-green-500">$1</span>');
+      modifiedText = modifiedText.replace(regex, '<span class="text-blue-400">$1</span>');
     });
     return modifiedText;
   };
