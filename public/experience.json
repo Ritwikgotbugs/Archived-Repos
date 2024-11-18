@@ -1,5 +1,23 @@
 [
     {
+        "organization": "AD-DING",
+        "url": "",
+        "role": "Web-Development Intern",
+        "duration": "Sep. 2024 – Dec. 2024",
+        "location": "Remote",
+        "description": [
+            "Deployed a production-ready application using Flask hosted on AWS EC2 with Docker.",
+            "Configured and optimized Nginx as a reverse proxy and DNS server to reducing manual overhead and latency for end-users and enhance application routing and performance.",
+            "Secured and optimized VPS with SSH hardening, UFW firewall configuration, and automated updates for improved server and network security along with easy maintenance."
+        ],
+        "tech": [
+            "Flask",
+            "AWS EC2",
+            "Docker",
+            "HTml/CSS/JS"
+        ]
+      },
+    {
         "organization": "Climec Labs",
         "url": "https://climeclabs.com/",
         "role": "SDE Intern",
