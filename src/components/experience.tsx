@@ -11,6 +11,18 @@ interface ExperienceProps {
     location: string;
     description: string[];
 }
+const highlightKeywords = [
+  'Flask hosted on AWS EC2 with Docker', 
+  'Nginx as a reverse proxy', 
+  'reducing manual overhead and latency for end-users',
+  'SSH hardening, UFW firewall configuration, and automated updates',
+  'Flutter-based IoT app for air purifiers',
+  'Integrated graphs and dashboard analysis',
+  'overseeing up to 3 development projects',
+  'Conducted sessions, provided guidance, resolved technical inquiries',
+  'conducting weekly code reviews to ensure clean, modular and maintainable code.',
+];  
+
 
 export const Experience = ({ tech,organization,role,url,duration,location,description }: ExperienceProps) => {
   return (
@@ -29,9 +41,19 @@ export const Experience = ({ tech,organization,role,url,duration,location,descri
           ))}
         </div>
         <div className='p-3 gap-y-2'>
-        {description.map((desc, index) => (
-            <p key={index} className='text-sm p-1'>- {desc}</p>
-        ))}
+          {description.map((desc, index) => {
+            const containsHighlight = highlightKeywords.some(keyword =>
+              desc.includes(keyword)
+            );
+
+            return (
+              <p
+                key={index}
+                className={`text-sm p-1 ${containsHighlight ? 'text-green-500' : ''}`}>
+                - {desc}
+              </p>
+            );
+          })}
         </div>
     </div>
   );
