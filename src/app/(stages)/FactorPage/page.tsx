@@ -31,6 +31,14 @@ const FactorPage = () => {
     if (localText && selectedFiles.length) {
       setText(localText);
       setImages(selectedFiles);
+  
+      // Mark stage as completed
+      const completedStages = JSON.parse(localStorage.getItem('completedStages') || '[]');
+      if (!completedStages.includes('facts')) {
+        completedStages.push('facts'); // Use the stage's unique ID
+        localStorage.setItem('completedStages', JSON.stringify(completedStages));
+      }
+  
       console.log('Form submitted', { text: localText, selectedFiles });
       router.push(`/post-stage?origin=1`);
     } else {

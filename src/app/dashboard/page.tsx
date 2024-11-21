@@ -1,14 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Dashboard = () => {
 const [expandedCard, setExpandedCard] = useState<string | null>(null);
+const [completedStages, setCompletedStages] = useState<string[]>([]);
 
 const handleToggle = (cardId: string) => {
 setExpandedCard(expandedCard === cardId ? null : cardId);
 };
+
+useEffect(() => {
+    const storedStages = JSON.parse(localStorage.getItem('completedStages') || '[]');
+    setCompletedStages(storedStages);
+  }, []);
 
 const cardData = [
 {
@@ -91,51 +97,59 @@ const cardData = [
 ];
 
 return (
-<div className="px-10 pb-10 bg-white">
-    <h1 className="text-4xl font-bold my-10">Start Your Test</h1>
-    <div className="flex flex-wrap justify-between">
-    {cardData.map((card) => (
-        <div
-        key={card.id}
-        className="bg-gray-200 rounded-md cursor-pointer shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform hover:scale-105 transition-transform duration-300"
-        >
-        <img
-            src={card.imageSrc}
-            alt={card.title}
-            className="w-full h-48 object-cover"
-        />
-        <div className="p-6">
-            <h2 className="text-2xl font-semibold mb-2 text-black">{card.title}</h2>
-            <h3 className="text-gray-500 mb-4">{card.subtitle}</h3>
-            <p className="text-gray-700 mb-4">
-            {expandedCard === card.id
-                ? card.fullDescription
-                : card.description}
-            {card.fullDescription !== card.description && (
-                <span
-                onClick={() => handleToggle(card.id)}
-                className="text-blue-500 cursor-pointer ml-2"
-                >
-                {expandedCard === card.id ? "Show Less" : "Read More"}
-                </span>
-            )}
-            </p>
-            <Link href={card.link}>
-            <button className="bg-[#11857D] text-white py-1 px-4 rounded-md flex items-center justify-center hover:bg-[#11857D] w-auto">
-                Start ➔
-            </button>
-            </Link>
-        </div>
-        </div>
-    ))}
+    <div className="px-10 pb-10 bg-white">
+      <h1 className="text-4xl font-bold my-10">Start Your Test</h1>
+      <div className="flex flex-wrap justify-between">
+        {cardData.map((card, index) => {
+          const isLocked = index > 0 && !completedStages.includes(cardData[index - 1].id);
+
+          return (
+            <div
+              key={card.id}
+              className={`bg-gray-200 rounded-md shadow-lg overflow-hidden mb-10 w-full md:w-[30%] transform ${
+                isLocked ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105 cursor-pointer'
+              } transition-transform duration-300`}
+              onClick={() => !isLocked && handleToggle(card.id)}
+            >
+              <img
+                src={card.imageSrc}
+                alt={card.title}
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h2 className="text-2xl font-semibold mb-2 text-black">{card.title}</h2>
+                <h3 className="text-gray-500 mb-4">{card.subtitle}</h3>
+                <p className="text-gray-700 mb-4">
+                  {expandedCard === card.id
+                    ? card.fullDescription
+                    : card.description}
+                  {card.fullDescription !== card.description && !isLocked && (
+                    <span
+                      onClick={() => handleToggle(card.id)}
+                      className="text-blue-500 cursor-pointer ml-2"
+                    >
+                      {expandedCard === card.id ? 'Show Less' : 'Read More'}
+                    </span>
+                  )}
+                </p>
+                {!isLocked ? (
+                  <Link href={card.link}>
+                    <button className="bg-[#11857D] text-white py-1 px-4 rounded-md hover:bg-[#11857D]">
+                      Start ➔
+                    </button>
+                  </Link>
+                ) : (
+                  <button className="bg-gray-400 text-white py-1 px-4 rounded-md" disabled>
+                    Locked
+                  </button>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </div>
-    <div className="flex justify-center mt-10">
-    <button className="bg-[#11857D] text-white py-2 px-6 rounded-lg flex items-center justify-center hover:bg-[#11857D] w-auto">
-        Download Data ↓
-    </button>
-    </div>
-</div>
-);
+  );
 };
 
 export default Dashboard;
