@@ -284,10 +284,10 @@ const FactorPage = () => {
       setText(localText);
       setImages(selectedFiles);
 
-      // Mark stage as completed
+      
       const completedStages = JSON.parse(localStorage.getItem('completedStages') || '[]');
       if (!completedStages.includes('facts')) {
-        completedStages.push('facts'); // Use the stage's unique ID
+        completedStages.push('facts');
         localStorage.setItem('completedStages', JSON.stringify(completedStages));
       }
 
