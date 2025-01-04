@@ -37,9 +37,9 @@ export const About = () => {
       </div>
           <div className="md:w-1/2 flex justify-center relative group rounded-full">
       <img
-        src="/assets/avatar-2.jpg"
+        src="/assets/avatar-2.jpeg"
         alt="About Me"
-        className="rounded-full w-full max-w-sm transition-transform duration-500 ease-in-out transform group-hover:scale-105 group-hover:blur-sm group-hover:grayscale"
+        className="w-full max-w-sm object-cover aspect-square rounded-full bg-blue-500 transition-transform duration-500 ease-in-out transform group-hover:scale-105 group-hover:blur-sm group-hover:grayscale"
       />
       <div className="absolute inset-0 flex justify-center items-center opacity-0 transition-opacity duration-1000 ease-in-out group-hover:opacity-100">
         <div className="bg-[url('/assets/bg-blur.jpg')] bg-cover bg-center opacity-97 border-2 border-slate-700 rounded-xl p-6 text-center w-full h-2/3 md:w-2/3">
