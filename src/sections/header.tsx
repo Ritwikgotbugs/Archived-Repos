@@ -37,7 +37,7 @@ export default function Header() {
       <button
         onClick={() =>
           window.open(
-            'https://drive.google.com/file/d/1s2FZo0Q-al5JdQXp6PdrMul0BXIiDtwR/view?usp=sharing'
+            'https://drive.google.com/file/d/1VEcAe7JJo0Vw9N8UMkGNA04nURhH1X5A/view?usp=drive_link'
           )
         }
         className="relative border-2 border-slate-700 bg-opacity-85 group-hover:border-transparent bg-slate-900 text-white text-lg py-1 px-2 md:py-2 md:px-4 rounded-xl md:text-base z-10 transition-all duration-300
@@ -60,7 +60,7 @@ export default function Header() {
       <button
         onClick={() =>
           window.open(
-            'https://drive.google.com/file/d/1s2FZo0Q-al5JdQXp6PdrMul0BXIiDtwR/view?usp=sharing'
+            'https://drive.google.com/file/d/1VEcAe7JJo0Vw9N8UMkGNA04nURhH1X5A/view?usp=drive_link'
           )
         }
         className="relative border-2 border-slate-700 bg-opacity-85 group-hover:border-transparent bg-slate-900 text-white py-1 px-2 md:py-2 md:px-4 rounded-2xl text-sm md:text-base z-10 transition-all duration-300
