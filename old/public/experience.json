@@ -1,0 +1,73 @@
+[
+    {
+        "organization": "AD-DING",
+        "url": "https://Ritwikgotbugs.vercel.app/experiences",
+        "role": "Web-Development Intern",
+        "duration": "Sep. 2024 – Dec. 2024",
+        "location": "Remote",
+        "description": [
+            "Deployed a production-ready application using Flask hosted on AWS EC2 with Docker.",
+            "Configured and optimized Nginx as a reverse proxy and DNS server to reducing manual overhead and latency for end-users and enhance application routing and performance.",
+            "Secured and optimized VPS with SSH hardening, UFW firewall configuration, and automated updates for improved server and network security along with easy maintenance."
+        ],
+        "tech": [
+            "Flask",
+            "AWS EC2",
+            "Docker",
+            "HTML/CSS/JS"
+        ]
+      },
+    {
+        "organization": "Climec Labs",
+        "url": "https://climeclabs.com/",
+        "role": "SDE Intern",
+        "duration": "Nov. 2023 – Dec. 2023",
+        "location": "Chennai,Tamil Nadu",
+        "description": [
+            "Developed Flutter-based IoT app for air purifiers, enabling users to control their devices and monitor AQI.",
+            "Integrated graphs and dashboard analysis for the user to track quality and control their air purifiers.",
+            "Enhanced the developer experience by 70% by incorporating Get-cli and Firebase for efficient data management."
+        ],
+        "tech": [
+            "Flutter",
+            "Dart",
+            "Firebase",
+            "Getx"
+        ]
+      },
+    {
+        "organization": "SRMKzilla",
+        "url": "https://www.srmkzilla.net/",
+        "role": "Technical Lead",
+        "duration": "Jun. 2024 – Present",
+        "location": "Chennai,Tamil Nadu",
+        "description": [
+            "Started as a member, promoted to Technical Lead, overseeing up to 3 development projects and guiding collaborative development initiatives and technical strategies within the club’s technology team.",
+            "Conducted sessions, provided guidance, resolved technical inquiries and communicated with other team members to ensure smooth development.",
+            "Led development as Project Lead for a Collaboration App connecting developers with open source opportunities, conducting weekly code reviews to ensure clean, modular and maintainable code."
+        ],
+        "tech": [
+            "Flutter",
+            "Dart",
+            "React Native",
+            "Expo",
+            "Tailwind CSS"
+        ]
+      },
+    {
+        "organization": "Google Developer Students Clubs SRM",
+        "url": "https://www.gdscsrm.com/",
+        "role": "Member",
+        "duration": "Apr. 2023 – Sept. 2024",
+        "location": "Chennai,Tamil Nadu",
+        "description": [
+            "Partnered with a team of 4 to develop an application for event management, facilitating seamless event uploads and registration processes",
+            "Worked with cross-functional teams to integrate feedback and enhance app functionalities, resulting in 60% improvements in managing events, participants, and registrations for the club"
+        ],
+        "tech": [
+            "Flutter",
+            "Dart",
+            "Getx"
+        ]
+      }
+]
