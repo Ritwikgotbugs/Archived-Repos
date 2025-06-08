@@ -1,0 +1,48 @@
+[
+    {
+      "category": "Languages",
+      "tech": [
+        { "name": "C", "iconUrl": "/assets/c.png" },
+        { "name": "C++", "iconUrl": "/assets/cpp.png" },
+        { "name": "JavaScript", "iconUrl": "/assets/javascript.png" },
+        { "name": "TypeScript", "iconUrl": "/assets/typescript.png" },
+        { "name": "Python", "iconUrl": "/assets/python.png" }
+      ]
+    },
+    {
+      "category": "Frontend",
+      "tech": [
+        { "name": "React", "iconUrl": "/assets/react.png" },
+        { "name": "Next.js", "iconUrl": "/assets/next.png" },
+        { "name": "TailwindCSS", "iconUrl": "/assets/tailwind.png" }
+      ]
+    },
+    {
+      "category": "Backend & DB",
+      "tech": [
+        { "name": "Node.js", "iconUrl": "/assets/node.png" },
+        { "name": "Express", "iconUrl": "/assets/express.png" },
+        { "name": "Firebase", "iconUrl": "/assets/firebase.png" },
+        { "name": "Flask", "iconUrl": "/assets/flask.jpg" },
+        { "name": "MongoDB", "iconUrl": "/assets/mongo.png" },
+        { "name": "PostgreSQL", "iconUrl": "/assets/postgres.png" }
+      ]
+    },
+    {
+      "category": "App Development",
+      "tech": [
+        { "name": "Flutter", "iconUrl": "/assets/flutter.png" },
+        { "name": "React-Native", "iconUrl": "/assets/react.png" },
+        { "name": "Dart", "iconUrl": "/assets/dart.png" }
+      ]
+    },
+    {
+      "category": "DevOps & Tools",
+      "tech": [
+        { "name": "AWS", "iconUrl": "/assets/aws.png" },
+        { "name": "Docker", "iconUrl": "/assets/docker.png" },
+        { "name": "Postman", "iconUrl": "/assets/postman.png" }
+      ]
+    }
+  ]
+  
