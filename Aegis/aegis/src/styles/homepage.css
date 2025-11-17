@@ -1,0 +1,109 @@
+.topic-snippet-container {
+    margin-bottom: 20px;
+}
+
+.topic-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 20px;
+}
+
+.topic-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.topic-item:hover {
+    box-shadow: 0 0 20px cyan;
+    transform: scale(1.1);
+}
+
+.speedometer-wrapper {
+    margin-bottom: 10px;
+}
+
+.topic-content {
+    flex-grow: 1;
+}
+
+.topic-title {
+    margin: 0;
+    margin-bottom: 5px;
+    color: #007bff;
+    cursor: grab;
+}
+
+.topic-description {
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'kRegularFont';
+    src: url('../assets/Outfit/fonts/Outfit-Regular.ttf');
+}
+@font-face {
+    font-family: 'kBoldFont';
+    src: url('../assets/Outfit/fonts/Outfit-Bold.ttf');
+}
+
+
+h1 {
+    font-family: kRegularFont;
+    margin: 0;
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+.typer {
+    font-size: 30px;
+    font-family: kRegularFont;
+    width: 100%;
+}
+
+.cursor {
+    font-size: 30px;
+    color: aqua;
+}
+
+body {
+    justify-content: start;
+    display: flex;
+    align-items: start;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.App {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'kRegularFont';
+    margin: 0;
+    font-size: 100px;
+}
+
+.typer {
+    font-size: 30px;
+    font-family: 'kRegularFont';
+    width: 100%;
+}
+
