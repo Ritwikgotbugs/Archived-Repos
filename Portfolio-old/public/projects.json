@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Edith AI",
+    "subtitle": "A chatbot which increases organizational efficiency",
+    "img": "/assets/edith.png",
+    "githubUrl": "https://github.com/Ritwikgotbugs/Edith-chatbot",
+    "url": "https://edith-chatbot.vercel.app/",
+    "stack": ["AWS (EC2)","Docker", "Firebase","Flask","NextJs"]
+
+  },
+  {
+    "title": "Xpens",
+    "subtitle": "Expense tracking app to gain control over finances",
+    "img": "https://i.postimg.cc/mDkGvfFv/xpens-removebg-preview.png",
+    "githubUrl": "https://github.com/Ritwikgotbugs/Xpens",
+    "url": "https://github.com/Ritwikgotbugs/Xpens/releases/tag/Xpens",
+    "stack": ["Flutter", "Dart", "Supabase", "Getx"]  
+  },
+  {
+    "title": "Blitz",
+    "subtitle": "An engaging social media platform to upload and share videos",
+    "img": "https://i.postimg.cc/rm9bfhmD/338539897-5d4df5c0-9434-4fc1-8e27-086a9f719710.png",
+    "githubUrl": "https://github.com/Ritwikgotbugs/Blitz",
+    "url": "https://github.com/Ritwikgotbugs/Blitz/releases/tag/Latest",
+    "stack": ["React-Native", "Expo", "Appwrite", "Tailwind CSS" ]
+
+  },
+  {
+    "title": "cli-mate",
+    "subtitle": "A detailed weather forecasting web app",
+    "img": "https://i.postimg.cc/FHrXqrKH/climate.png",
+    "githubUrl": "https://github.com/Ritwikgotbugs/cli-mate",
+    "url": "https://cli-mate-react.netlify.app/",
+    "stack": ["React","ViteJs", "Tailwind CSS"]
+
+  }
+]
