@@ -1,0 +1,15 @@
+services:
+  flask-app:
+    build: ./Flask
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./Flask:/app
+
+  server-app:
+    build: ./server
+    ports:
+      - "8000:8000"
+      - "81 : 5001"
+    volumes:
+      - ./server:/index.js
