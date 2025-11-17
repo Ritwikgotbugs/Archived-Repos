@@ -1,0 +1,76 @@
+.weatherCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin:50px;
+}
+
+
+.weatherIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: fit-content;
+    height: fit-content;
+    border-radius: 30px;
+    margin: 20px;
+    flex-direction: column;
+}
+
+h1,h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.description {
+    font-size: 1.5em;
+}
+#location {
+    font-size: 2rem;
+}
+#temperature {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.weatherIcon img {
+    background-size: contain;
+    background-repeat: no-repeat; 
+    background-position: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 0;
+}
+
+.weatherIcon h2 {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+@media screen and (max-width:600px) {
+    .weatherCard {
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) and (min-width:600px){
+    .weatherCard {
+        flex-direction: row;
+        width: 90%;
+        padding: 20px;
+    }
+    
+}
