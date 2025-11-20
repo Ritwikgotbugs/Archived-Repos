@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 
 
-api_key = "AIzaSyD7zakq__erEUjr641l0XESPPAOx1WMmCg"
+api_key = api_key
 genai.configure(api_key=api_key)
 
 app = Flask(__name__)
